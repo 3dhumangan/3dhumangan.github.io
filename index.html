@@ -1,0 +1,365 @@
+---
+permalink: /
+qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 1191, 1425, 1118, 1401, 1453, 1173, 1483, 1393]
+pose_interp: [7007, 7015, 7020, 7145, 7032, 7065, 7098, 7112, 7146, 7164, 7200]
+---
+
+<!-- ---
+qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 1191, 1425, 1118, 1401, 1453, 1173, 1483, 1393]
+--- -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="HG3D: 3D-Aware Human Image Generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HG3D: 3D-Aware Human Image Generation</title>
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/bulma.min.css">
+  <link rel="stylesheet" href="/assets/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="/assets/css/bulma-slider.min.css">
+  <!-- <link rel="stylesheet" href="/assets/css/fontawesome.all.min.css"> -->
+  <!-- <script src="https://kit.fontawesome.com/ec39017701.js" crossorigin="anonymous"></script> -->
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="/assets/css/index.css">
+
+  <script src="/assets/js/jquery-3.5.1.min.js"></script>
+  <script defer src="/assets/js/fontawesome.all.min.js"></script>
+  <script src="/assets/js/bulma-carousel.min.js"></script>
+  <script src="/assets/js/bulma-slider.min.js"></script>
+  <script src="/assets/js/index.js"></script>
+</head>
+
+<body>
+
+  <div class="box" id="loading">
+    <div class="container" style="padding: 20px;">
+      <div class="columns is-centered">
+        <h5 class="title is-5" style="margin-bottom: 15px;">Loading ...</h5>
+      </div>
+      <div class="columns is-centered">
+        <progress class="progress is-large is-info" max="100">60%</progress>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <section class="hero">
+    <div class="hg3d-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h3 class="title is-2 publication-title">HG3D: 3D-Aware Human Image Generation</h3>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+
+                <span class="author-block">
+                  <a href="https://yzhq97@github.io">Zhuoqian Yang</a><sup>1</sup>, </span>
+                <span class="author-block">
+                  <a href="mailto:lishikai@sensetime.com">Shikai Li</a><sup>2</sup>, </span>
+                <span class="author-block">
+                  <a href="https://wywu.github.io/">Wayne Wu</a><sup>1,2</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://daibo.info/">Bo Dai</a><sup>1</sup>
+                </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Shanghai AI Laboratory, </span>
+              <span class="author-block"><sup>2</sup>SenseTime Research</span>
+            </div>
+
+<!--             <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="#" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>Technical Report (Coming Soon)</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>GitHub (Coming Soon)</span>
+                  </a>
+                </span>
+              </div> -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser -->
+<!--   <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="column is-full">
+        <video preload autoplay loop muted>
+          <source src="/assets/media/teaser.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section> -->
+  <!-- Teaser -->
+
+  <!-- Abstract. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h3 class="title is-3">Abstract</h3>
+          <div class="content has-text-justified">
+            <p>
+              Data-driven human image synthesis is a rising topic with a wide variety of industrial demands and applications. We propose the first 3D-aware generative adversarial network (GAN) that synthesizes full-body human images with consistent appearance under different view-angles and body-poses. To tackle the representational and computational challenges in synthesizing the articulated structure of human bodies, we propose a novel generator architecture in which a 2D convolutional backbone is modulated by two mapping networks, namely a 3D pose mapping network and an appearance mapping network. The 3D pose mapping network is formulated as a renderable implicit function which is inherently view-consistent. To preserve this consistency during the 2D synthesis process, we propose a network design with two key aspects: 1) our backbone is a pixel-wise independent convolutional network which avoids positional reference and promotes equalvariance; 2) modulation from the pose mapping network is passed into the backbone by means of spatial adaptive batch normalization instead of instance normalization so that underlying structure is not impaired. The network is adversarially learned from a large collection of web images needless of manual annotation.
+            </p>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!--/ Abstract. -->
+
+  <!-- Paper video. -->
+  <section>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-8">
+          <h3 class="title is-3">Video Demo</h3>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/C64wbeu_l1E?autoplay=0" frameborder="10"
+              allow="autoplay; encrypted-media" width="50%" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / Paper video.   -->
+
+
+  <section class="section">
+    <div class="container is-max-desktop has-text-centered">
+
+      <div class="columns is-centered">
+
+        <!-- Qualitative Results -->
+        <div class="column is-full">
+          <h3 class="title is-4">Qualitative Results</h3>
+          <p>Browse through random generations.</p>
+          <br><br>
+          <div id="qr-carousel" class="carousel results-carousel">
+
+            {% for id in page.qualitative %}
+              <div class="item card">
+                <video muted preload autoplay loop>
+                  <source src="/assets/qualitative/{{ id }}.mp4" type="video/mp4">
+                </video>
+                <video muted preload autoplay loop>
+                  <source src="/assets/smpl/{{ id }}.mp4" type="video/mp4">
+                </video>
+              </div>
+            {% endfor %}
+
+            
+          </div>
+        </div>
+        <!--/ Qualitative Results -->
+
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <h3 class="title is-4">View Consistency</h3>
+          <p>
+            The appearance of the generated humans are consistent under different poses and view angles.
+          </p>
+          <br>
+          <div id="vc-carousel" class="carousel results-carousel">
+
+            {% for i in (1..4) %}
+              <div class="item card">
+                <video muted preload autoplay loop>
+                  <source src="/assets/view_consistency/vc{{ i }}.mp4" type="video/mp4">
+                </video>
+              </div>
+            {% endfor %}
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <h3 class="title is-4">Appearance Interpolation</h3>
+            <div class="content has-text-centered">
+              <p>
+                We can also animate the scene by interpolating the deformation latent codes of two input
+                frames. Use the slider here to linearly interpolate between the left frame and the right
+                frame.
+              </p>
+            </div>
+
+            <div class="card" style="padding: 1rem 2rem; border-radius: 1rem">
+
+              <div class="container is-max-desktop">
+                <div class="columns is-vcentered">
+                  <div class="column is-one-third interpolation-video-column">
+                    <div id="interpolation-image-wrapper-1">
+                      Loading...
+                    </div>
+                    <div id="interpolation-image-wrapper-2">
+                      Loading...
+                    </div>
+                  </div>
+                  <div class="column is-one-third interpolation-video-column">
+                    <div id="interpolation-image-wrapper-3">
+                      Loading...
+                    </div>
+                    <div id="interpolation-image-wrapper-4">
+                      Loading...
+                    </div>
+                  </div>
+                  <div class="column is-one-third interpolation-video-column">
+                    <div id="interpolation-image-wrapper-5">
+                      Loading...
+                    </div>
+                    <div id="interpolation-image-wrapper-6">
+                      Loading...
+                    </div>
+                  </div>
+                </div>
+                <div class="columns is-centered">
+                  <div class="column is-full">
+                    <input class="slider is-fullwidth is-large is-info"
+                           id="interpolation-slider"
+                           step="1" min="0" max="100" value="0" type="range">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="columns is-centered">
+        <div class="column is-9">
+          <h3 class="title is-4">Pose Interpolation</h3>
+          <div class="content has-text-justified">
+            Our 3D-aware GAN can be used to render simple animation of generated humans by interpolating between poses.
+          </div>
+          <br><br>
+          <div id="pi-carousel" class="carousel results-carousel">
+
+            {% for id in page.pose_interp %}
+              <div class="item card">
+                <video muted preload autoplay loop>
+                  <source src="/assets/pose/{{ id }}_pose.mp4" type="video/mp4">
+                </video>
+              </div>
+            {% endfor %}
+
+            
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <br><br>
+
+  <section>
+    <div class="container is-max-desktop">
+      <!-- Concurrent Work. -->
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <h3 class="title is-4">Concurrent Works</h3>
+
+          <div class="content has-text-justified">
+            <p>
+              These exciting works were introduced around the same time as ours.
+            </p>
+            <ul>
+              <li><a href="https://arxiv.org/abs/2208.00561">AvatarGen: a 3D Generative Model for Animatable Human Avatars</a></li>
+            </ul>
+             <ul>
+              <li><a href="https://arxiv.org/pdf/2206.14314">Generative Neural Articulated Radiance Fields</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+    <br><br>
+
+    <div class="container is-max-desktop content">
+      <h3 class="title">BibTeX</h3>
+      <p>Technical report to be released soon ... </p>
+<!--       <pre><code>@article{fu2022styleganhuman,
+      title={StyleGAN-Human: A Data-Centric Odyssey of Human Generation},
+      author={Fu, Jianglin and Li, Shikai and Jiang, Yuming and Lin, Kwan-Yee and Qian, Chen and Loy, Chen-Change and Wu, Wayne and Liu, Ziwei },
+      journal   = {arXiv preprint},
+      volume    = {arXiv:2204.11823},
+      year    = {2022}
+    }</code></pre> -->
+      <br><br>
+    </div>
+  </section>
+
+  <footer class="footer">
+
+    <div class="columns is-centered">
+      <div class="content">
+        <img class="thumbnail" src="/assets/images/shanghaiAILAB_up.jpeg" style="height:50px;">
+        <img class="thumbnail" src="/assets/images/sensetime.jpeg" style="height:50px;">
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="content">
+        <p> template from <a
+            href="https://github.com/nerfies/nerfies.github.io" target="_blank"> Nerfies Project Page</a>. </p>
+      </div>
+    </div>
+
+  </footer>
+
+  <script>
+    $(window).on('load', function () {
+      $('#loading').hide();
+    })
+  </script>
+
+  
+</body>
+
+</html>

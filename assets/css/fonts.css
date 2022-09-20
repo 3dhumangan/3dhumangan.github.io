@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/google-sans.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/noto-sans.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Iwona';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../fonts/iwona.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Rockwell';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../fonts/rockwell.ttf) format('truetype');
+}
