@@ -77,7 +77,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
               <span class="author-block"><sup>2</sup>SenseTime Research</span>
             </div>
 
-<!--             <div class="column has-text-centered">
+            <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
                   <a href="#" target="_blank"
@@ -92,22 +92,16 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
                   <a href="#" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                    </span>
-                    <span>Video</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <a href="#" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>GitHub (Coming Soon)</span>
                   </a>
                 </span>
-              </div> -->
+              </div>
+            </div>
 
+            <div class="column is-full">
+              <small style="color:#777777">Note: This website uses the HTML5 video tag. Please use a browser other than Safari for this site to work properly.</small>
             </div>
           </div>
         </div>
@@ -119,7 +113,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
 <!--   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="column is-full">
-        <video preload autoplay loop muted>
+        <video preload autoplay loop muted playsinline>
           <source src="/assets/media/teaser.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -175,10 +169,10 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
 
             {% for id in page.qualitative %}
               <div class="item card">
-                <video muted preload autoplay loop>
+                <video muted preload autoplay loop playsinline>
                   <source src="/assets/qualitative/{{ id }}.mp4" type="video/mp4">
                 </video>
-                <video muted preload autoplay loop>
+                <video muted preload autoplay loop playsinline>
                   <source src="/assets/smpl/{{ id }}.mp4" type="video/mp4">
                 </video>
               </div>
@@ -202,7 +196,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
 
             {% for i in (1..4) %}
               <div class="item card">
-                <video muted preload autoplay loop>
+                <video muted preload autoplay loop playsinline>
                   <source src="/assets/view_consistency/vc{{ i }}.mp4" type="video/mp4">
                 </video>
               </div>
@@ -277,7 +271,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
 
             {% for id in page.pose_interp %}
               <div class="item card">
-                <video muted preload autoplay loop>
+                <video muted preload autoplay loop playsinline>
                   <source src="/assets/pose/{{ id }}_pose.mp4" type="video/mp4">
                 </video>
               </div>
