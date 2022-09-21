@@ -164,10 +164,7 @@ h1, h2, h3, h4, h5 {
   margin: 0 !important;
 }
 
-#interpolation-image-wrapper {
-  width: 100%;
-}
-#interpolation-image-wrapper img {
+.interpolation-image-wrapper img {
   border-radius: 5px;
 }
 

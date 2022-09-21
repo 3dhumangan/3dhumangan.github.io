@@ -65,9 +65,8 @@ $(document).ready(function() {
       autoplaySpeed: 2000,
       breakpoints: [
         { changePoint: 640, slidesToShow: 4, slidesToScroll: 1 }, 
-        { changePoint: 1408, slidesToShow: 8, slidesToScroll: 1 }
-        { changePoint: 2816, slidesToShow: 16, slidesToScroll: 1 }
-        { changePoint: 999999, slidesToShow: 16, slidesToScroll: 1 }
+        { changePoint: 2560, slidesToShow: 8, slidesToScroll: 1 },
+        { changePoint: 10240, slidesToShow: 4, slidesToScroll: 1 },
         ]
     });
 
@@ -80,9 +79,8 @@ $(document).ready(function() {
       autoplaySpeed: 6000,
       breakpoints:[
         { changePoint: 640, slidesToShow: 1, slidesToScroll: 1 }, 
-        { changePoint: 1408, slidesToShow: 2, slidesToScroll: 1 }
-        { changePoint: 2816, slidesToShow: 4, slidesToScroll: 1 }
-        { changePoint: 999999, slidesToShow: 4, slidesToScroll: 1 }
+        { changePoint: 2560, slidesToShow: 2, slidesToScroll: 1 },
+        { changePoint: 10240, slidesToShow: 1, slidesToScroll: 1 },
       ]
     });
 
@@ -93,9 +91,8 @@ $(document).ready(function() {
       autoplaySpeed: 6000,
       breakpoints: [
         { changePoint: 640, slidesToShow: 4, slidesToScroll: 1 }, 
-        { changePoint: 1408, slidesToShow: 6, slidesToScroll: 1 }
-        { changePoint: 2816, slidesToShow: 12, slidesToScroll: 1 }
-        { changePoint: 999999, slidesToShow: 12, slidesToScroll: 1 }
+        { changePoint: 2560, slidesToShow: 6, slidesToScroll: 1 },
+        { changePoint: 10240, slidesToShow: 4, slidesToScroll: 1 },
         ]
     });
 
