@@ -101,7 +101,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
             </div>
 
             <div class="column is-full">
-              <small style="color:#777777">Note: This website uses the HTML5 video tag. Please use a browser other than Safari for this site to work properly.</small>
+              <small style="color:#777777">Note: Please use a browser other than Safari for HTML5 videos to play properly.</small>
             </div>
           </div>
         </div>
@@ -145,8 +145,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
         <div class="column is-8">
           <h3 class="title is-3">Video Demo</h3>
           <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/C64wbeu_l1E?autoplay=0" frameborder="10"
-              allow="autoplay; encrypted-media" width="50%" allowfullscreen></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/C64wbeu_l1E?autoplay=0" frameborder="10" allow="autoplay; encrypted-media" width="50%" allowfullscreen></iframe> -->
           </div>
         </div>
       </div>
@@ -169,11 +168,13 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
 
             {% for id in page.qualitative %}
               <div class="item card">
-                <video muted preload autoplay loop playsinline>
+                <video muted preload autoplay="autoplay" loop playsinline>
                   <source src="/assets/qualitative/{{ id }}.mp4" type="video/mp4">
+                  <p>Your browser does not support HTML5 video.</p>
                 </video>
                 <video muted preload autoplay loop playsinline>
                   <source src="/assets/smpl/{{ id }}.mp4" type="video/mp4">
+                  <p>Your browser does not support HTML5 video.</p>
                 </video>
               </div>
             {% endfor %}
@@ -198,6 +199,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
               <div class="item card">
                 <video muted preload autoplay loop playsinline>
                   <source src="/assets/view_consistency/vc{{ i }}.mp4" type="video/mp4">
+                  <p>Your browser does not support HTML5 video.</p>
                 </video>
               </div>
             {% endfor %}
@@ -273,6 +275,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
               <div class="item card">
                 <video muted preload autoplay loop playsinline>
                   <source src="/assets/pose/{{ id }}_pose.mp4" type="video/mp4">
+                  <p>Your browser does not support HTML5 video.</p>
                 </video>
               </div>
             {% endfor %}
