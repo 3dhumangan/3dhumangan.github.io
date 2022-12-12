@@ -1,21 +1,18 @@
 ---
 permalink: /
-qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 1191, 1425, 1118, 1401, 1453, 1173, 1483, 1393]
-pose_interp: [7007, 7015, 7020, 7145, 7032, 7065, 7098, 7112, 7146, 7164, 7200]
+multiview: [3194, 3180, 3131, 3047, 3099, 3039, 3134, 3084, 3128, 3214, 3115, 3064, 3106, 3231, 3072, 3132, 3157, 3079, 3138, 3029, 3046]
+pose_interp: [9068, 9075, 9107, 9112, 9118, 9132, 9145]
 ---
 
-<!-- ---
-qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 1191, 1425, 1118, 1401, 1453, 1173, 1483, 1393]
---- -->
 
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="3DHumanGAN: 3D-Aware Human Image Generation">
+  <meta name="description" content="3DHumanGAN: Towards Photo-Realistic 3D-Aware Human Image Generation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>3DHumanGAN: 3D-Aware Human Image Generation</title>
+  <title>3DHumanGAN: Towards Photo-Realistic 3D-Aware Human Image Generation</title>
 
   <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet"> -->
   <link rel="stylesheet" href="/assets/css/fonts.css">
@@ -29,7 +26,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="/assets/css/index.css">
 
-  <script src="/assets/js/jquery-3.5.1.min.js"></script>
+  <script src="/assets/js/jquery-3.6.1.min.js"></script>
   <script defer src="/assets/js/fontawesome.all.min.js"></script>
   <script src="/assets/js/bulma-carousel.min.js"></script>
   <script src="/assets/js/bulma-slider.min.js"></script>
@@ -56,7 +53,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h3 class="title is-2 publication-title">3DHumanGAN: 3D-Aware Human Image Generation</h3>
+            <h3 class="title is-2 publication-title">3DHumanGAN: Towards Photo-realistic 3D-Aware Human Image Generation</h3>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
 
@@ -64,6 +61,8 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
                   <a href="https://yzhq97@github.io">Zhuoqian Yang</a><sup>1</sup>, </span>
                 <span class="author-block">
                   <a href="mailto:lishikai@sensetime.com">Shikai Li</a><sup>2</sup>, </span>
+                <span class="author-block">
+                  <a href="mailto:wangxiaogang@sensetime.com">Xiaogang Wang</a><sup>3</sup>, </span>
                 <span class="author-block">
                   <a href="https://wywu.github.io/">Wayne Wu</a><sup>1,2</sup>,
                 </span>
@@ -75,6 +74,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
             <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup>Shanghai AI Laboratory, </span>
               <span class="author-block"><sup>2</sup>SenseTime Research</span>
+              <span class="author-block"><sup>3</sup>CUHK</span>
             </div>
 
             <div class="column has-text-centered">
@@ -130,7 +130,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
           <h3 class="title is-3">Abstract</h3>
           <div class="content has-text-justified">
             <p>
-              Data-driven human image synthesis is a rising topic with a wide variety of industrial demands and applications. We propose the first 3D-aware generative adversarial network (GAN) that synthesizes full-body human images with consistent appearance under different view-angles and body-poses. To tackle the representational and computational challenges in synthesizing the articulated structure of human bodies, we propose a novel generator architecture in which a 2D convolutional backbone is modulated by two mapping networks, namely a 3D pose mapping network and an appearance mapping network. The 3D pose mapping network is formulated as a renderable implicit function which is inherently view-consistent. To preserve this consistency during the 2D synthesis process, we propose a network design with two key aspects: 1) our backbone is a pixel-wise independent convolutional network which avoids positional reference and promotes equalvariance; 2) modulation from the pose mapping network is passed into the backbone by means of spatial adaptive batch normalization instead of instance normalization so that underlying structure is not impaired. The network is adversarially learned from a large collection of web images needless of manual annotation.
+              Data-driven human image generation is a rising topic with a wide variety of industrial demands and applications. We present 3DHumanGAN, a 3D-aware generative adversarial network (GAN) for Human image Generation, with consistent appearance under different view-angles and body-poses. To tackle the representational and computational challenges in synthesizing the articulated structure of human bodies, we propose a novel generator architecture in which a 2D convolutional backbone is modulated by a 3D pose mapping network. The 3D pose mapping network is formulated as a renderable implicit function conditioned on a posed 3D human mesh. This design has several merits: i) it allows us to harness the power of 2D GANs to generate photo-realistic images; ii) it generates consistent images under varying view-angles and specifiable poses; iii) the model can benefit from the 3D human prior. Our model is adversarially learned from a collection of web images needless of manual annotation. Code and models will be publicly available.
             </p>
           </div>
         </div>
@@ -145,7 +145,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
         <div class="column is-8">
           <h3 class="title is-3">Video Demo</h3>
           <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/C64wbeu_l1E?autoplay=0" frameborder="10" allow="autoplay; encrypted-media" width="50%" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VVTW_QhRg8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -166,14 +166,10 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
           <br><br>
           <div id="qr-carousel" class="carousel results-carousel">
 
-            {% for id in page.qualitative %}
+            {% for id in page.multiview %}
               <div class="item card">
                 <video muted preload autoplay="autoplay" loop playsinline>
-                  <source src="/assets/qualitative/{{ id }}.mp4" type="video/mp4">
-                  <p>Your browser does not support HTML5 video.</p>
-                </video>
-                <video muted preload autoplay loop playsinline>
-                  <source src="/assets/smpl/{{ id }}.mp4" type="video/mp4">
+                  <source src="/assets/multiview/{{ id }}.mp4" type="video/mp4">
                   <p>Your browser does not support HTML5 video.</p>
                 </video>
               </div>
@@ -222,7 +218,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
             <div class="card" style="padding: 1rem 2rem; border-radius: 1rem">
 
                 <div class="columns is-vcentered">
-                  <div class="column is-one-third interpolation-video-column">
+                  <div class="column is-half interpolation-video-column">
                     <div class="interpolation-image-wrapper" id="interpolation-image-wrapper-1">
                       Loading...
                     </div>
@@ -230,19 +226,11 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
                       Loading...
                     </div>
                   </div>
-                  <div class="column is-one-third interpolation-video-column">
+                  <div class="column is-half interpolation-video-column">
                     <div class="interpolation-image-wrapper" id="interpolation-image-wrapper-3">
                       Loading...
                     </div>
                     <div class="interpolation-image-wrapper" id="interpolation-image-wrapper-4">
-                      Loading...
-                    </div>
-                  </div>
-                  <div class="column is-one-third interpolation-video-column">
-                    <div class="interpolation-image-wrapper" id="interpolation-image-wrapper-5">
-                      Loading...
-                    </div>
-                    <div class="interpolation-image-wrapper" id="interpolation-image-wrapper-6">
                       Loading...
                     </div>
                   </div>
@@ -251,7 +239,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
                   <div class="column is-full">
                     <input class="slider is-fullwidth is-large is-info"
                            id="interpolation-slider"
-                           step="1" min="0" max="100" value="0" type="range">
+                           step="1" min="0" max="120" value="0" type="range">
                   </div>
                 </div>
 
@@ -263,7 +251,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
       <br><br>
 
       <div class="columns is-centered">
-        <div class="column is-9">
+        <div class="column is-12">
           <h3 class="title is-4">Pose Interpolation</h3>
           <div class="content has-text-justified">
             Our 3D-aware GAN can be used to render simple animation of generated humans by interpolating between poses.
@@ -295,7 +283,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
   <section>
     <div class="container is-max-desktop">
       <!-- Concurrent Work. -->
-      <div class="columns is-centered">
+<!--       <div class="columns is-centered">
         <div class="column is-full">
           <h3 class="title is-4">Concurrent Works</h3>
 
@@ -311,7 +299,7 @@ qualitative: [1203, 1481, 1465, 1541, 1417, 1423, 1222, 1419, 1138, 1451, 1438, 
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <!--/ Concurrent Work. -->
 

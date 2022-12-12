@@ -1,28 +1,24 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
-var INTERP_BASE = "/assets/interp";
+var INTERP_BASE = "/assets/appearance";
 var NUM_INTERP_FRAMES = 120;
+var interp_images = [[], [], [], []];
 
-var interp_images = [[], [], [], [], [], []];
 function preloadInterpolationImages() {
   for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
     interp_images[0][i] = new Image();
-    interp_images[0][i].src = INTERP_BASE + '/' + 's1p1' + '/' + String(i).padStart(3, '0') + '.jpg';
+    interp_images[0][i].src = INTERP_BASE + '/' + 'case1' + '/' + String(i).padStart(3, '0') + '.jpg';
     interp_images[1][i] = new Image();
-    interp_images[1][i].src = INTERP_BASE + '/' + 's2p1' + '/' + String(i).padStart(3, '0') + '.jpg';
+    interp_images[1][i].src = INTERP_BASE + '/' + 'case2' + '/' + String(i).padStart(3, '0') + '.jpg';
     interp_images[2][i] = new Image();
-    interp_images[2][i].src = INTERP_BASE + '/' + 's3p2' + '/' + String(i).padStart(3, '0') + '.jpg';
+    interp_images[2][i].src = INTERP_BASE + '/' + 'case3' + '/' + String(i).padStart(3, '0') + '.jpg';
     interp_images[3][i] = new Image();
-    interp_images[3][i].src = INTERP_BASE + '/' + 's4p1' + '/' + String(i).padStart(3, '0') + '.jpg';
-    interp_images[4][i] = new Image();
-    interp_images[4][i].src = INTERP_BASE + '/' + 's5p1' + '/' + String(i).padStart(3, '0') + '.jpg';
-    interp_images[5][i] = new Image();
-    interp_images[5][i].src = INTERP_BASE + '/' + 's6p1' + '/' + String(i).padStart(3, '0') + '.jpg';
+    interp_images[3][i].src = INTERP_BASE + '/' + 'case4' + '/' + String(i).padStart(3, '0') + '.jpg';
   }
 }
 
 function setInterpolationImage(i) {
-  i = NUM_INTERP_FRAMES - i - 1;
+  // i = NUM_INTERP_FRAMES - i - 1;
   var image = interp_images[0][i];
   image.ondragstart = function() { return false; };
   image.oncontextmenu = function() { return false; };
@@ -39,17 +35,10 @@ function setInterpolationImage(i) {
   image.ondragstart = function() { return false; };
   image.oncontextmenu = function() { return false; };
   $('#interpolation-image-wrapper-4').empty().append(image);
-  var image = interp_images[4][i];
-  image.ondragstart = function() { return false; };
-  image.oncontextmenu = function() { return false; };
-  $('#interpolation-image-wrapper-5').empty().append(image);
-  var image = interp_images[5][i];
-  image.ondragstart = function() { return false; };
-  image.oncontextmenu = function() { return false; };
-  $('#interpolation-image-wrapper-6').empty().append(image);
 }
 
 $(document).ready(function() {
+
     // Check for click events on the navbar burger icon
     $(".navbar-burger").click(function() {
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
@@ -64,9 +53,9 @@ $(document).ready(function() {
       autoplay: true,
       autoplaySpeed: 2000,
       breakpoints: [
-        { changePoint: 640, slidesToShow: 4, slidesToScroll: 1 }, 
-        { changePoint: 2560, slidesToShow: 8, slidesToScroll: 1 },
-        { changePoint: 10240, slidesToShow: 4, slidesToScroll: 1 },
+        { changePoint: 640, slidesToShow: 3, slidesToScroll: 1 }, 
+        { changePoint: 2560, slidesToShow: 6, slidesToScroll: 1 },
+        { changePoint: 10240, slidesToShow: 3, slidesToScroll: 1 },
         ]
     });
 
@@ -90,9 +79,9 @@ $(document).ready(function() {
       autoplay: true,
       autoplaySpeed: 6000,
       breakpoints: [
-        { changePoint: 640, slidesToShow: 4, slidesToScroll: 1 }, 
+        { changePoint: 640, slidesToShow: 3, slidesToScroll: 1 }, 
         { changePoint: 2560, slidesToShow: 6, slidesToScroll: 1 },
-        { changePoint: 10240, slidesToShow: 4, slidesToScroll: 1 },
+        { changePoint: 10240, slidesToShow: 3, slidesToScroll: 1 },
         ]
     });
 
