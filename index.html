@@ -10,9 +10,9 @@ pose_interp: [9068, 9075, 9107, 9112, 9118, 9132, 9145]
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="3DHumanGAN: Towards Photo-Realistic 3D-Aware Human Image Generation">
+  <meta name="description" content="3DHumanGAN: 3D-Aware Human Image Generation with 3D Pose Mapping">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>3DHumanGAN: Towards Photo-Realistic 3D-Aware Human Image Generation</title>
+  <title>3DHumanGAN: 3D-Aware Human Image Generation with 3D Pose Mapping</title>
 
   <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet"> -->
   <link rel="stylesheet" href="/assets/css/fonts.css">
@@ -53,18 +53,18 @@ pose_interp: [9068, 9075, 9107, 9112, 9118, 9132, 9145]
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h3 class="title is-2 publication-title">3DHumanGAN: Towards Photo-realistic 3D-Aware Human Image Generation</h3>
+            <h3 class="title is-2 publication-title">3DHumanGAN: 3D-Aware Human Image Generation with 3D Pose Mapping</h3>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
 
                 <span class="author-block">
-                  <a href="https://yzhq97@github.io">Zhuoqian Yang</a><sup>1</sup>, </span>
+                  <a href="https://yzhq97@github.io">Zhuoqian Yang</a><sup>1,2</sup>, </span>
                 <span class="author-block">
-                  <a href="mailto:lishikai@sensetime.com">Shikai Li</a><sup>2</sup>, </span>
+                  <a href="mailto:lishikai@pjlab.org.cn">Shikai Li</a><sup>1</sup>, </span>
                 <!-- <span class="author-block">
                   <a href="mailto:wangxiaogang@sensetime.com">Xiaogang Wang</a><sup>3</sup>, </span> -->
                 <span class="author-block">
-                  <a href="https://wywu.github.io/">Wayne Wu</a><sup>1,2&#8224 </sup>,
+                  <a href="https://wywu.github.io/">Wayne Wu</a><sup>1&#8224 </sup>,
                 </span>
                 <span class="author-block">
                   <a href="https://daibo.info/">Bo Dai</a><sup>1</sup>
@@ -73,7 +73,7 @@ pose_interp: [9068, 9075, 9107, 9112, 9118, 9132, 9145]
 
             <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup>Shanghai AI Laboratory, </span>
-              <span class="author-block"><sup>2</sup>SenseTime Research</span>
+              <span class="author-block"><sup>2</sup>EPFL</span>
               <!-- <span class="author-block"><sup>3</sup>CUHK</span> -->
             </div>
 
@@ -130,7 +130,7 @@ pose_interp: [9068, 9075, 9107, 9112, 9118, 9132, 9145]
           <h3 class="title is-3">Abstract</h3>
           <div class="content has-text-justified">
             <p>
-              We present 3DHumanGAN, a 3D-aware generative adversarial network (GAN) that synthesizes images of full-body humans with consistent appearances under different view-angles and body-poses. To tackle the representational and computational challenges in synthesizing the articulated structure of human bodies, we propose a novel generator architecture in which a 2D convolutional backbone is modulated by a 3D pose mapping network. The 3D pose mapping network is formulated as a renderable implicit function conditioned on a posed 3D human mesh. This design has several merits: i) it allows us to harness the power of 2D GANs to generate photo-realistic images; ii) it generates consistent images under varying view-angles and specifiable poses; iii) the model can benefit from the 3D human prior. Our model is adversarially learned from a collection of web images needless of manual annotation.
+              We present 3DHumanGAN, a 3D-aware generative adversarial network that synthesizes photorealistic images of full-body humans with consistent appearances under different view-angles and body-poses. To tackle the representational and computational challenges in synthesizing the articulated structure of human bodies, we propose a novel generator architecture in which a 2D convolutional backbone is modulated by a 3D pose mapping network. The 3D pose mapping network is formulated as a renderable implicit function conditioned on a posed 3D human mesh. This design has several merits: i) it leverages the strength of 2D GANs to produce high-quality images; ii) it generates consistent images under varying view-angles and poses; iii) the model can incorporate the 3D human prior and enable pose conditioning.
             </p>
           </div>
         </div>
@@ -145,7 +145,7 @@ pose_interp: [9068, 9075, 9107, 9112, 9118, 9132, 9145]
         <div class="column is-8">
           <h3 class="title is-3">Video Demo</h3>
           <div class="publication-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/fYgVYGMLpnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-bUNfhNYj24?si=rI3sKFJ2sYMmim8U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
